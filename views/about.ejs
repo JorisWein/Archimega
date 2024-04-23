@@ -1,0 +1,71 @@
+<% layout("/boilerplate.ejs", { currentPage:'about' }) %>
+
+    <link rel="stylesheet" href="/stylesheets/about.css">
+
+    <h1 class="about-msg">About Us</h1>
+    <!-- Beautify layout -->
+    <div class="about-bio">
+        <div class="bio-image">
+            <div class="img">
+                <img src="https://images.unsplash.com/photo-1598899200441-63ce01421a11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80"
+                    alt="">
+            </div>
+        </div>
+        <div class="bio-container">
+            <p class="bio">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur ut fugiat facere ipsum ullam
+                eaque
+                recusandae quidem at magni. Laudantium provident corrupti ex sed consequuntur fuga, ad odio possimus
+                libero!
+            </p>
+        </div>
+    </div>
+
+    <h2 class="team-h2">Meet Our Team</h2>
+    <div class="team-wrapper">
+        <img class="back-btn" src="/leftarrow.svg" alt="">
+        <div class="team-container">
+            <% for(let man of team){ %>
+                <div class="team-box">
+                    <div class="image">
+                        <img class="team-image" src="<%=man.images%>" alt="">
+                    </div>
+                    <div class="name">
+                        <p>
+                            <%= man.name + ' ' + man.surname %>
+                        </p>
+                    </div>
+                    <div class="profession">
+                        <p>
+                            <%=man.profession%>
+                        </p>
+                    </div>
+                    <div class="spec-about">
+                        <p>
+                            <%=man.specialisation%>
+                        </p>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+        <img class="next-btn" src="/rightarrow.svg" alt="">
+    </div>
+
+    <h2 class="mission-title">Our Mission</h2>
+    <div class="mission-container">
+        <div class="mission-text">
+            <p class="our-mission">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti tempora non
+                quae veniam perspiciatis recusandae architecto assumenda vel dolore laboriosam natus, eaque, nulla
+                itaque voluptate nihil et aspernatur. Voluptatibus quos accusamus soluta minus corrupti consectetur
+                perspiciatis in? Numquam, a officiis?
+            </p>
+        </div>
+        <div class="mission-img">
+            <img class="mission-image"
+                src="https://images.unsplash.com/photo-1600869009498-8d429f88d4f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="">
+        </div>
+    </div>
+
+    <script src="/javascripts/about.js"></script>

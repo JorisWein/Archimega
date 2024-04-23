@@ -1,0 +1,26 @@
+<% layout("/boilerplate.ejs", { currentPage: 'projects' }) %>
+    <link rel="stylesheet" href="/stylesheets/projects.css">
+
+    <h1 class="projects-h1">Our Best Projects</h1>
+    <!-- Make only 3 projects on one row -->
+    <div class="project-wrapper">
+        <%for(let project of projects) {%>
+            <div class="project">
+                <a class="project-link" href="/projects/<%=project._id%>">
+                    <div class="project-image-box">
+                        <img class="project-img" src="<%=project.images[0]%>" alt="">
+                    </div>
+                    <div class="project-title">
+                        <p>
+                            <%=project.title%>
+                        </p>
+                    </div>
+                    <div class="project-description">
+                        <p>
+                            <%=project.description%>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <% } %>
+    </div>

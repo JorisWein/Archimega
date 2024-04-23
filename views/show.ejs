@@ -1,0 +1,36 @@
+<% layout("/boilerplate.ejs") %>
+    <link rel="stylesheet" href="/stylesheets/show.css">
+
+    <div class="project-wrapper">
+        <div class="project-container">
+            <h1 class="project-title">
+                <%=project.title%>
+            </h1>
+            <div id="project-image-box" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="<%=project.images[0] %>" class="project-img" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="<%=project.images[1] %>" class="project-img" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#project-image-box"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#project-image-box"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="project-description">
+                <p>
+                    <%=project.description%>
+                </p>
+            </div>
+        </div>
+    </div>
